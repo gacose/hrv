@@ -8,7 +8,7 @@ Este es un ejmeplo de como calcular la **desviaci√≥n est√°ndar** <http://rmarkdo
 
 
 ```{r}
-a<- read.csv('gc12.csv')
+a<- read.csv('../Datos/gc12.csv')
 sd(a$X619)
 ```
 
@@ -17,7 +17,7 @@ Los archivos de los periodos de tiempo (tacogramas) entre latidos de cada person
 Para obtener la desviaci√≥n estandar de las columnas de tacogramas, se revisa la cantidad de datos para delimitar desde y hasta donde debe hacer el c√°lculo.
 
 ```{r}
-b<- read.csv('gc.csv',header = TRUE)
+b<- read.csv('../Datos/gc.csv',header = TRUE)
 #Calculo la desviaci√≥n para 12 respiraciones
 
 c1 <- sd(b$a[0:382])
@@ -48,6 +48,52 @@ for(elemento in 1:length(b)){
   y = b[elemento][x]
   print(sd(y))
 }
+```
+Para Carlos Cecilio Pacheco c
+```{r}
+c<- read.csv('../Datos/ccp.csv',header = TRUE)
+```
+```{r}
+for(elemento in 1:length(c)){
+  x<-!is.na(c[elemento])
+  y = c[elemento][x]
+  print(sd(y))
+}
+```
+
+
+Para Francisco Gonz·lez d
+ Edgardo Morales e
+ Azucena Chavez f
+ Sa˙l Hern·ndez g
+ Ra˙l Alejandro h
+ NÈstor OrtÌz i
+ J Antonio G j
+ FS Guzm·n k
+ Marco Vinicio l
+```{r}
+d<- read.csv('../Datos/fg.csv',header = TRUE)
+e<- read.csv('../Datos/em.csv',header = TRUE)
+f<-read.csv('../Datos/ach.csv',header = TRUE)
+g<-read.csv('../Datos/sh.csv',header = TRUE)
+h<-read.csv('../Datos/ra.csv',header = TRUE)
+i<-read.csv('../Datos/no.csv',header = TRUE)
+j<-read.csv('../Datos/jag.csv',header = TRUE)
+k<-read.csv('../Datos/fsg.csv',header = TRUE)
+l<-read.csv('../Datos/mv.csv',header = TRUE)
+
+
+lista=c(d,e,f,g,h,i,j,k,l)
+
+
+for(s in 0:length(lista)){
+  temp<-lista[s]
+
+  for(elemento in 0:length(temp)){
+  x<-!is.na(temp[elemento])
+  y = temp[elemento][x]
+  print(sd(y))
+}}
 ```
 
 
