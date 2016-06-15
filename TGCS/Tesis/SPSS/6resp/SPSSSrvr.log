@@ -1,0 +1,10 @@
+Time			Account	Session	Message
+11/18/08 17:42:28	Gaby Coria		Logged on
+11/18/08 17:42:28	Gaby Coria		Instantiated package DataEditorPkg
+11/18/08 17:42:29	Gaby Coria		Instantiated package DACManagerPkg
+11/18/08 17:42:30	Gaby Coria		Instantiated package SpsswPackage
+11/18/08 17:42:40	Gaby Coria		Instantiated package GDSServer
+11/18/08 17:50:34	Gaby Coria		Instantiated package SaveFileDACPkg
+11/18/08 17:50:35	Gaby Coria		Instantiated package SPSSSyntaxDACPkg
+11/18/08 17:50:36	Gaby Coria		Instantiated package ExcelDACPkg
+11/18/08 17:51:52	Gaby Coria		Session terminated.
