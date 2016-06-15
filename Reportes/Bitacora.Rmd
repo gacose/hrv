@@ -1,0 +1,53 @@
+---
+title: "Bitacora"
+output: html_document
+---
+
+Este es un ejmeplo de como calcular la **desviación estándar** <http://rmarkdown.rstudio.com>.
+
+
+
+```{r}
+a<- read.csv('gc12.csv')
+sd(a$X619)
+```
+
+
+Los archivos de los periodos de tiempo (tacogramas) entre latidos de cada persona fueron cambiados de formato, para poderlos cargar con distinta extensión en R. En cada archivo quedan los 3 registros, la columna de 12 respiraciones por minuto como **a**, la columna de datos de 9 respiraciones por minuto como **b** y la de 6 respiraciones por minuto como **c**.
+Para obtener la desviación estandar de las columnas de tacogramas, se revisa la cantidad de datos para delimitar desde y hasta donde debe hacer el cálculo.
+
+```{r}
+b<- read.csv('gc.csv',header = TRUE)
+#Calculo la desviación para 12 respiraciones
+
+c1 <- sd(b$a[0:382])
+c2 <- sd(b$b)
+c3 <- sd(b$c[0:392])
+lista=c(c1,c2,c3)
+```
+```
+```{r}
+table(lista)
+```
+
+```{r}
+for(elemento in b){
+ # x<-!is.na(elemento);
+# sd(elemento[x]);
+elemento
+}
+```
+
+
+
+Este código me sirve para hacer el ciclo de realizar la desviación estándar para cada archivo con las 3 columnas, arrojando los 3 resultados.
+
+```{r}
+for(elemento in 1:length(b)){
+  x<-!is.na(b[elemento])
+  y = b[elemento][x]
+  print(sd(y))
+}
+```
+
+
