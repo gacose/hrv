@@ -72,28 +72,31 @@ Para Francisco González d
  FS Guzmán k
  Marco Vinicio l
 ```{r}
-d<- read.csv('../Datos/fg.csv',header = TRUE)
-e<- read.csv('../Datos/em.csv',header = TRUE)
-f<-read.csv('../Datos/ach.csv',header = TRUE)
-g<-read.csv('../Datos/sh.csv',header = TRUE)
-h<-read.csv('../Datos/ra.csv',header = TRUE)
-i<-read.csv('../Datos/no.csv',header = TRUE)
-j<-read.csv('../Datos/jag.csv',header = TRUE)
-k<-read.csv('../Datos/fsg.csv',header = TRUE)
-l<-read.csv('../Datos/mv.csv',header = TRUE)
+lista<-c('../Datos/fg.csv',
+    '../Datos/em.csv',
+    '../Datos/ach.csv',
+    '../Datos/sh.csv',
+    '../Datos/ra.csv',
+    '../Datos/no.csv',
+    '../Datos/jag.csv',
+    '../Datos/fsg.csv',
+    '../Datos/mv.csv')
 
-
-lista=c(d,e,f,g,h,i,j,k,l)
-
-
-for(s in 0:length(lista)){
-  temp<-lista[s]
-
+procesaFile <- function(f) {
+  salida <- NULL
+  temp <- read.csv(f,header=TRUE)
   for(elemento in 0:length(temp)){
   x<-!is.na(temp[elemento])
   y = temp[elemento][x]
-  print(sd(y))
-}}
+  
+  print( sd(y))
+  }
+  
+}
+
+sapply(lista, procesaFile)
+
+
 ```
 
 

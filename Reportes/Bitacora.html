@@ -150,7 +150,7 @@ elemento
 <pre><code>## [1] 60.07198
 ## [1] 66.70619
 ## [1] 91.73135</code></pre>
-<p>Para Carlos Cecilio Pacheco</p>
+<p>Para Carlos Cecilio Pacheco c</p>
 <pre class="r"><code>c&lt;- read.csv('../Datos/ccp.csv',header = TRUE)</code></pre>
 <pre class="r"><code>for(elemento in 1:length(c)){
   x&lt;-!is.na(c[elemento])
@@ -160,6 +160,127 @@ elemento
 <pre><code>## [1] 43.43349
 ## [1] 50.751
 ## [1] 74.96168</code></pre>
+<p>Para Francisco González d Edgardo Morales e Azucena Chavez f Saúl Hernández g Raúl Alejandro h Néstor Ortíz i J Antonio G j FS Guzmán k Marco Vinicio l</p>
+<pre class="r"><code>lista&lt;-c('../Datos/fg.csv',
+    '../Datos/em.csv',
+    '../Datos/ach.csv',
+    '../Datos/sh.csv',
+    '../Datos/ra.csv',
+    '../Datos/no.csv',
+    '../Datos/jag.csv',
+    '../Datos/fsg.csv',
+    '../Datos/mv.csv')
+
+procesaFile &lt;- function(f) {
+  temp &lt;- read.csv(f,header=TRUE)
+  
+  for(elemento in 0:length(temp)){
+  x&lt;-!is.na(temp[elemento])
+  y = temp[elemento][x]
+  print(f)
+  print(sd(y))
+  }
+}
+
+sapply(lista, procesaFile)</code></pre>
+<pre><code>## [1] &quot;../Datos/fg.csv&quot;
+## [1] NA
+## [1] &quot;../Datos/fg.csv&quot;
+## [1] 33.86379
+## [1] &quot;../Datos/fg.csv&quot;
+## [1] 44.35941
+## [1] &quot;../Datos/fg.csv&quot;
+## [1] 50.33161
+## [1] &quot;../Datos/em.csv&quot;
+## [1] NA
+## [1] &quot;../Datos/em.csv&quot;
+## [1] 44.77306
+## [1] &quot;../Datos/em.csv&quot;
+## [1] 44.94139
+## [1] &quot;../Datos/em.csv&quot;
+## [1] 50.36781
+## [1] &quot;../Datos/ach.csv&quot;
+## [1] NA
+## [1] &quot;../Datos/ach.csv&quot;
+## [1] 48.4249
+## [1] &quot;../Datos/ach.csv&quot;
+## [1] 58.23101
+## [1] &quot;../Datos/ach.csv&quot;
+## [1] 78.37638
+## [1] &quot;../Datos/sh.csv&quot;
+## [1] NA
+## [1] &quot;../Datos/sh.csv&quot;
+## [1] 105.7458
+## [1] &quot;../Datos/sh.csv&quot;
+## [1] 72.43584
+## [1] &quot;../Datos/sh.csv&quot;
+## [1] 77.68756
+## [1] &quot;../Datos/ra.csv&quot;
+## [1] NA
+## [1] &quot;../Datos/ra.csv&quot;
+## [1] 212.9997
+## [1] &quot;../Datos/ra.csv&quot;
+## [1] 191.4032
+## [1] &quot;../Datos/ra.csv&quot;
+## [1] 215.4761
+## [1] &quot;../Datos/no.csv&quot;
+## [1] NA
+## [1] &quot;../Datos/no.csv&quot;
+## [1] 30.79016
+## [1] &quot;../Datos/no.csv&quot;
+## [1] 44.01246
+## [1] &quot;../Datos/no.csv&quot;
+## [1] 94.62991
+## [1] &quot;../Datos/jag.csv&quot;
+## [1] NA
+## [1] &quot;../Datos/jag.csv&quot;
+## [1] 44.50142
+## [1] &quot;../Datos/jag.csv&quot;
+## [1] 35.67302
+## [1] &quot;../Datos/jag.csv&quot;
+## [1] 46.92746
+## [1] &quot;../Datos/fsg.csv&quot;
+## [1] NA
+## [1] &quot;../Datos/fsg.csv&quot;
+## [1] 81.10189
+## [1] &quot;../Datos/fsg.csv&quot;
+## [1] 55.26319
+## [1] &quot;../Datos/fsg.csv&quot;
+## [1] 119.8267
+## [1] &quot;../Datos/mv.csv&quot;
+## [1] NA
+## [1] &quot;../Datos/mv.csv&quot;
+## [1] 32.8718
+## [1] &quot;../Datos/mv.csv&quot;
+## [1] 33.3229
+## [1] &quot;../Datos/mv.csv&quot;
+## [1] 35.84378</code></pre>
+<pre><code>## $`../Datos/fg.csv`
+## NULL
+## 
+## $`../Datos/em.csv`
+## NULL
+## 
+## $`../Datos/ach.csv`
+## NULL
+## 
+## $`../Datos/sh.csv`
+## NULL
+## 
+## $`../Datos/ra.csv`
+## NULL
+## 
+## $`../Datos/no.csv`
+## NULL
+## 
+## $`../Datos/jag.csv`
+## NULL
+## 
+## $`../Datos/fsg.csv`
+## NULL
+## 
+## $`../Datos/mv.csv`
+## NULL</code></pre>
 
 
 
