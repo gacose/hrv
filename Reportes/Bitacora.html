@@ -172,88 +172,53 @@ elemento
     '../Datos/mv.csv')
 
 procesaFile &lt;- function(f) {
+  salida &lt;- NULL
   temp &lt;- read.csv(f,header=TRUE)
-  
   for(elemento in 0:length(temp)){
   x&lt;-!is.na(temp[elemento])
   y = temp[elemento][x]
-  print(f)
-  print(sd(y))
+  
+  print( sd(y))
   }
+  
 }
 
 sapply(lista, procesaFile)</code></pre>
-<pre><code>## [1] &quot;../Datos/fg.csv&quot;
-## [1] NA
-## [1] &quot;../Datos/fg.csv&quot;
+<pre><code>## [1] NA
 ## [1] 33.86379
-## [1] &quot;../Datos/fg.csv&quot;
 ## [1] 44.35941
-## [1] &quot;../Datos/fg.csv&quot;
 ## [1] 50.33161
-## [1] &quot;../Datos/em.csv&quot;
 ## [1] NA
-## [1] &quot;../Datos/em.csv&quot;
 ## [1] 44.77306
-## [1] &quot;../Datos/em.csv&quot;
 ## [1] 44.94139
-## [1] &quot;../Datos/em.csv&quot;
 ## [1] 50.36781
-## [1] &quot;../Datos/ach.csv&quot;
 ## [1] NA
-## [1] &quot;../Datos/ach.csv&quot;
 ## [1] 48.4249
-## [1] &quot;../Datos/ach.csv&quot;
 ## [1] 58.23101
-## [1] &quot;../Datos/ach.csv&quot;
 ## [1] 78.37638
-## [1] &quot;../Datos/sh.csv&quot;
 ## [1] NA
-## [1] &quot;../Datos/sh.csv&quot;
 ## [1] 105.7458
-## [1] &quot;../Datos/sh.csv&quot;
 ## [1] 72.43584
-## [1] &quot;../Datos/sh.csv&quot;
 ## [1] 77.68756
-## [1] &quot;../Datos/ra.csv&quot;
 ## [1] NA
-## [1] &quot;../Datos/ra.csv&quot;
 ## [1] 212.9997
-## [1] &quot;../Datos/ra.csv&quot;
 ## [1] 191.4032
-## [1] &quot;../Datos/ra.csv&quot;
 ## [1] 215.4761
-## [1] &quot;../Datos/no.csv&quot;
 ## [1] NA
-## [1] &quot;../Datos/no.csv&quot;
 ## [1] 30.79016
-## [1] &quot;../Datos/no.csv&quot;
 ## [1] 44.01246
-## [1] &quot;../Datos/no.csv&quot;
 ## [1] 94.62991
-## [1] &quot;../Datos/jag.csv&quot;
 ## [1] NA
-## [1] &quot;../Datos/jag.csv&quot;
 ## [1] 44.50142
-## [1] &quot;../Datos/jag.csv&quot;
 ## [1] 35.67302
-## [1] &quot;../Datos/jag.csv&quot;
 ## [1] 46.92746
-## [1] &quot;../Datos/fsg.csv&quot;
 ## [1] NA
-## [1] &quot;../Datos/fsg.csv&quot;
 ## [1] 81.10189
-## [1] &quot;../Datos/fsg.csv&quot;
 ## [1] 55.26319
-## [1] &quot;../Datos/fsg.csv&quot;
 ## [1] 119.8267
-## [1] &quot;../Datos/mv.csv&quot;
 ## [1] NA
-## [1] &quot;../Datos/mv.csv&quot;
 ## [1] 32.8718
-## [1] &quot;../Datos/mv.csv&quot;
 ## [1] 33.3229
-## [1] &quot;../Datos/mv.csv&quot;
 ## [1] 35.84378</code></pre>
 <pre><code>## $`../Datos/fg.csv`
 ## NULL
